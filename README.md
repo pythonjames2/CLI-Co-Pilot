@@ -2,7 +2,7 @@
 
 TLDR:
 
-**Write what you want to do and press CTRL + G, and the command magically appears** in your shell
+Write what you want to do and press CTRL + G, and the command magically appears in your shell
 flavor (bash/zsh/fish). However complicated the instruction was.
 
 Now with added support to use OpenAI Chat models (GPT-3.5 and GPT-4)
