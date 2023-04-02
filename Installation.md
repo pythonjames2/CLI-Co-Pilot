@@ -1,6 +1,6 @@
-# Codex CLI Installation
+# CLI Co-Pilot Installation
 
-In order to leverage the Codex CLI tool, you will need to prepare your environment for the shell of your choice. Installation instructions are shown below for each supported shell environment. 
+In order to leverage the tool, you will need to prepare your environment for the shell of your choice. Installation instructions are shown below for each supported shell environment. 
 
 The following terminal environments are supported:  
 
@@ -13,13 +13,13 @@ Learn to install PowerShell on Linux/MacOS
 
 ## Prerequisites
 
-In order to run the Codex CLI, ensure that you have python installed. To install the required python packages, please go to the command line in the shell of your choice and enter the following commands: 
+In order to run the CLI, ensure that you have python installed. To install the required python packages, please go to the command line in the shell of your choice and enter the following commands: 
 
 ```
 python -m pip install -r requirements.txt
 ```
 
-Additionally, the OpenAI API key, organization id, and engine id are required to execute the Codex CLI tool. 
+Additionally, the OpenAI API key, organization id, and engine id are required to execute the CLI tool. 
 
 To obtain the OpenAI API key information, go to (https://beta.openai.com/account/api-keys) and login into your account. 
 
@@ -33,28 +33,26 @@ To obtain the OpenAI organization id, go to OpenAI Settings page (https://beta.o
 See image below for reference: 
 ![](images/OpenAI-orgid.png)
 
-To obtain the OpenAI engine id, go to OpenAI Engines page (https://beta.openai.com/docs/engines/codex-series-private-beta) for the engines available for Codex models. Select the desired engine and save the engine id with the API key and organization id stored in previous steps. 
+To obtain the OpenAI engine id, go to OpenAI Engines page (https://platform.openai.com/docs/models/overview) for the chat engines available. Select the desired model and save the engine (model) id with the API key and organization id stored in previous steps. 
 
-See image below for reference: 
-![](images/OpenAI-engineid.png)
 
 ## Bash instructions
 
-To leverage the Codex CLI on WSL and Linux environments using Bash please follow the steps below: 
+To leverage the CLI on WSL and Linux environments using Bash please follow the steps below: 
 
-1. Open Bash shell and download the Codex CLI project to your desired location in Linux by cloning the Codex CLI repo using the following command: 
+1. Open Bash shell and download the CLI project to your desired location in Linux by cloning the CLI repo using the following command: 
     ```
-    $ git clone https://github.com/microsoft/Codex-CLI.git /your/custom/path/
-    ```
-
-2. Once you have the project cloned. Go to the directory that contains the Codex CLI code.
-    ```
-	cd </your/custom/path>/Codex-CLI
+    $ git clone https://github.com/antonosika/CLI-Co-Pilot.git /your/custom/path/
     ```
 
-3. Setup your Bash Codex CLI environment.
+2. Once you have the project cloned. Go to the directory that contains the code.
+    ```
+	cd </your/custom/path>/CLI-Co-Pilot
+    ```
 
-	In the Codex CLI folder, there is a folder named `scripts` where you will find a `bash_setup.sh` script which is used to setup the Bash environment.
+3. Setup your Bash CLI environment.
+
+	In the folder, there is a folder named `scripts` where you will find a `bash_setup.sh` script which is used to setup the Bash environment.
 
 	Run the following commands to setup your environment, the script will prompt
 	for Organization id, API key and engine id:
@@ -69,7 +67,7 @@ To leverage the Codex CLI on WSL and Linux environments using Bash please follow
 
 ### Clean up
 
-Once you have finished using the Codex CLI tool, go to the folder that contains the Codex CLI code. ex `cd ~/your/custom/path/Codex-CLI`. Run the following command to clean up the Codex CLI bash environment.
+Once you have finished using the CLI tool, go to the folder that contains the code. ex `cd ~/your/custom/path/CLI-Co-Pilot`. Run the following command to clean up the CLI bash environment.
 ```
 source ./scripts/bash_cleanup.sh
 ```
@@ -83,7 +81,7 @@ By default `bash_setup.sh` will prompt for the required settings. It's also poss
 |--------------|-------------|
 | `-o <value>` | To pass your [OpenAI Organization Id](https://beta.openai.com/account/org-settings) |
 | `-k <value>` | To pass your [OpenAI API key](https://beta.openai.com/account/api-keys) |
-| `-e <value>` | To specify the [OpenAI Engine Id](https://beta.openai.com/docs/engines/codex-series-private-beta) |
+| `-e <value>` | To specify the [OpenAI Engine Id](https://github.com/antonosika/CLI-Co-Pilot.git) |
 
 Example: 
 
@@ -91,7 +89,7 @@ Example:
 source bash_setup.sh -o myorgid -k myapikey -e someengineid
 ```
 
-For help running the Codex CLI Bash setup, please run the following command:   
+For help running the CLI Bash setup, please run the following command:   
 ```
 source bash_setup.sh -h
 ```
@@ -103,10 +101,10 @@ source bash_setup.sh -h
 1. Download this project to `~/your/custom/path/`.
 
 ```
-$ git clone https://github.com/microsoft/Codex-CLI.git ~/your/custom/path/
+$ git clone https://github.com/antonosika/CLI-Co-Pilot.git ~/your/custom/path/
 ```
 
-2. In zsh, go to `~/your/custom/path/` (the folder contains Codex CLI code), then run the following command to setup your zsh environment. The script will prompt for Organization id, API key and engine id:
+2. In zsh, go to `~/your/custom/path/` (the folder contains code), then run the following command to setup your zsh environment. The script will prompt for Organization id, API key and engine id:
 
 ```
 ./scripts/zsh_setup.sh
@@ -116,7 +114,7 @@ $ git clone https://github.com/microsoft/Codex-CLI.git ~/your/custom/path/
 3. Run `zsh`, start typing and complete it using `^G`!
 
 ### Clean up
-Once you are done, go to `~/your/custom/path/` (the folder contains Codex CLI code), then run the following command to clean up.
+Once you are done, go to `~/your/custom/path/` (the folder contains code), then run the following command to clean up.
 ```
 ./scripts/zsh_cleanup.sh
 ```
@@ -127,7 +125,7 @@ Once you are done, go to `~/your/custom/path/` (the folder contains Codex CLI co
 |--------------|-------------|
 | `-o <value>` | To pass your [OpenAI Organization Id](https://beta.openai.com/account/org-settings) |
 | `-k <value>` | To pass your [OpenAI API key](https://beta.openai.com/account/api-keys) |
-| `-e <value>` | To specify the [OpenAI Engine Id](https://beta.openai.com/docs/engines/codex-series-private-beta) |
+| `-e <value>` | To specify the [OpenAI Engine Id](https://platform.openai.com/docs/models/overview) |
 
 
 ## Powershell instructions
@@ -135,7 +133,7 @@ Once you are done, go to `~/your/custom/path/` (the folder contains Codex CLI co
 1. Download this project to wherever you want. For example, `C:\your\custom\path\` or `~/your/custom/path`.
 
 ```PowerShell
-git clone https://github.com/microsoft/Codex-CLI.git C:\your\custom\path\
+git clone https://github.com/antonosika/CLI-Co-Pilot.git C:\your\custom\path\
 ```
 
 2. Open PowerShell and run the following command. If running in Windows, start PowerShell "as an Administrator".
@@ -148,7 +146,7 @@ For more information about Execution Policies, see
 [about_Execution_Policies](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies).
 
 
-3. In the same Powershell terminal, go to `C:\your\custom\path\Codex-CLI\` (the folder that contains the cloned Codex CLI project). Copy the following command, then replace `YOUR_OPENAI_ORGANIZATION_ID` and `ENGINE_ID` with your OpenAI organization Id and OpenAI engine Id. Run the command to setup your PowerShell environment. It will prompt you for OpenAI access key.
+3. In the same Powershell terminal, go to `C:\your\custom\path\CLI-Co-Pilot\` (the folder that contains the cloned project). Copy the following command, then replace `YOUR_OPENAI_ORGANIZATION_ID` and `ENGINE_ID` with your OpenAI organization Id and OpenAI engine Id. Run the command to setup your PowerShell environment. It will prompt you for OpenAI access key.
 
 ```PowerShell
 .\scripts\powershell_setup.ps1 -OpenAIOrganizationId 'YOUR_OPENAI_ORGANIZATION_ID' -OpenAIEngineId 'ENGINE_ID'
@@ -158,7 +156,7 @@ For more information about Execution Policies, see
 4. Open a new PowerShell session, type in `#` followed by your natural language command and hit `Ctrl + G`!
 
 ### Clean up
-Once you are done, go to `C:\your\custom\path\` (the folder that contains the cloned Codex CLI project), then run the following command to clean up.
+Once you are done, go to `C:\your\custom\path\` (the folder that contains the cloned project), then run the following command to clean up.
 ```
 .\scripts\powershell_cleanup.ps1
 ```
@@ -174,5 +172,5 @@ Set-ExecutionPolicy Undefined -Scope CurrentUser
 |--|--|--|
 | `-OpenAIApiKey` | [SecureString](https://docs.microsoft.com/en-us/dotnet/api/system.security.securestring) | Required. If is not supplied, the script will prompt you to input the value. You can find this value at [https://beta.openai.com/account/api-keys](https://beta.openai.com/account/api-keys). To provide the value via PowerShell parameter, this is an example for PowerShell 7: <br/> `.\scripts\powershell_setup.ps1 -OpenAIApiKey (ConvertTo-SecureString "YOUR_OPENAI_API_KEY" -AsPlainText -Force)` | 
 | `-OpenAIOrganizationId` | String | Required. Your [OpenAI organization Id](https://beta.openai.com/account/org-settings). |
-| `-OpenAIEngineId` | String | Required. The [OpenAI engine Id](https://beta.openai.com/docs/engines/codex-series-private-beta) that provides access to a model.|
-| `-RepoRoot` | [FileInfo](https://docs.microsoft.com/en-us/dotnet/api/system.io.fileinfo) | Optional. Default to the current folder.<br>The value should be the path of Codex CLI folder. Example:<br/>`.\scripts\powershell_setup.ps1 -RepoRoot 'C:\your\custom\path'`|
+| `-OpenAIEngineId` | String | Required. The [OpenAI engine Id](https://platform.openai.com/docs/models/overview) that provides access to a model.|
+| `-RepoRoot` | [FileInfo](https://docs.microsoft.com/en-us/dotnet/api/system.io.fileinfo) | Optional. Default to the current folder.<br>The value should be the path of CLI co pilot folder. Example:<br/>`.\scripts\powershell_setup.ps1 -RepoRoot 'C:\your\custom\path'`|
