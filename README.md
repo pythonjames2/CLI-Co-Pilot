@@ -1,6 +1,9 @@
-# CLI Co-Pilot, with support for Chat models (GPT-3.5 and GPT-4)
+# CLI Co-Pilot - Natural Language Command Line Interface
 
-This is a fork of the [microsoft repository](https://github.com/microsoft/Codex-CLI/issues) that stopped working after OpenAI discontinued the codex models).
+Added support to use OpenAI Chat models (GPT-3.5 and GPT-4)
+
+
+This is a fork of the [microsoft repository](https://github.com/microsoft/Codex-CLI/issues) that stopped working after OpenAI discontinued the codex models.
 
 When you set it up, please make sure to use one of the engines:
 - gpt-3.5-turbo
