@@ -1,7 +1,11 @@
 # CLI Co-Pilot - Natural Language Command Line Interface
 
-Added support to use OpenAI Chat models (GPT-3.5 and GPT-4)
+TLDR:
 
+Write what you want to do and press CTRL + G, and the command magically appears in your shell
+flavor (bash/zsh/fish). However complicated the instruction was.
+
+Now with added support to use OpenAI Chat models (GPT-3.5 and GPT-4)
 
 This is a fork of the [microsoft repository](https://github.com/microsoft/Codex-CLI/issues) that stopped working after OpenAI discontinued the codex models.
 
@@ -9,8 +13,9 @@ When you set it up, please make sure to use one of the engines:
 - gpt-3.5-turbo
 - gpt-4
 
+Original README below.
 
-# Original README - Codex CLI - Natural Language Command Line Interface
+## Codex CLI - Natural Language Command Line Interface
 
 This project uses [GPT-3 Codex](https://openai.com/blog/openai-codex/) to convert natural language commands into commands in PowerShell, Z shell and Bash.
 

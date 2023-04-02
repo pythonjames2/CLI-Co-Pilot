@@ -198,7 +198,7 @@ if __name__ == '__main__':
         else:
             prefix = '#' + config['shell'] + '\n\n'
 
-        codex_query = prefix + prompt_file.read_prompt_file(user_query) + user_query
+        codex_query = prefix + prompt_file.read_prompt_file(user_query) + user_query + '\n'
 
         # get the response from codex
         response = openai.ChatCompletion.create(model=config['engine'], messages=[{'role':'user', 'content':codex_query}], temperature=config['temperature'], max_tokens=config['max_tokens'], stop="#")
@@ -208,7 +208,7 @@ if __name__ == '__main__':
         if is_sensitive_content(user_query + '\n' + completion_all):
             print("\n#   Sensitive content detected, response has been redacted")
         else:
-            print(completion_all)
+            print('\n', completion_all)
 
             # append output to prompt context file
             if config['multi_turn'] == "on":
